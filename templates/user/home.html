@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Hello User</h1>
+<p>You have {{active_todos.count}} pending todos in your list.</p>
+<ul>
+    {% for todo in todos %}
+    <li>
+        {{todo.name}} - Due By {{todo.target_date}} - completed = {{todo.complete}}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
